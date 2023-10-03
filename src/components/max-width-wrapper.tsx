@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  className: string;
+  className?: string;
 };
 
 const MaxWidthWrapper = ({ children, className }: Props) => {
