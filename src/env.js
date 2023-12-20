@@ -31,6 +31,11 @@ export const env = createEnv({
     // Add ` on ID and SECRET if you want to make sure they're not empty
     GITHUB_CLIENT_ID: z.string(),
     GITHUB_SECRET: z.string(),
+    AWS_BUCKET: z.string(),
+    AWS_REGION: z.string(),
+    AWS_ENDPOINT: z.string(),
+    AWS_ACCESS_KEY_ID: z.string(),
+    AWS_SECRET_ACCESS_KEY: z.string(),
   },
 
   /**
@@ -53,6 +58,11 @@ export const env = createEnv({
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
     GITHUB_SECRET: process.env.GITHUB_SECRET,
+    AWS_BUCKET: process.env.AWS_BUCKET,
+    AWS_REGION: process.env.AWS_REGION,
+    AWS_ENDPOINT: process.env.AWS_ENDPOINT,
+    AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+    AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

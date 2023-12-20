@@ -10,5 +10,12 @@ services:
       - 3306:3306
     volumes:
       - ./docker/mariadb/data:/var/lib/mysql
+  s3-bucket:
+    build: ./s3rver
+    restart: always
+    ports:
+      - 4569:4569
+    volumes:
+      - "./s3rver/storage:/home/app/s3rver/storage"
 volumes:
   tabinary-storage:

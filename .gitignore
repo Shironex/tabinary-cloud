@@ -15,6 +15,8 @@
 # production
 /build
 
+/s3rver/storage
+
 # misc
 .DS_Store
 *.pem
