@@ -43,7 +43,7 @@ const LoginAuth = () => {
     <div className="mx-auto grid gap-6">
       <form onSubmit={onSubmit}>
         <div className="grid gap-2">
-          <div className="grid gap-1">
+          <div className="grid gap-2 mb-2">
             <Label className="sr-only lg:not-sr-only" htmlFor="email">
               Email
             </Label>

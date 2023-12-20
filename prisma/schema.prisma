@@ -48,8 +48,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-
-  createdAt DateTime @default(now())
+  storage       Storage?
+  createdAt     DateTime  @default(now())
 }
 
 model VerificationToken {
@@ -58,4 +58,25 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Storage {
+  id     String @id @default(cuid())
+  name   String @unique
+  file   File[]
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @unique
+}
+
+model File {
+  id         String   @id @default(cuid())
+  name       String
+  path       String
+  bucketpath String
+  size       BigInt
+  mimeType   String
+  storageId  String
+  storage    Storage  @relation(fields: [storageId], references: [id], onDelete: Cascade)
+  updatedAt  DateTime @updatedAt
+  createdAt  DateTime @default(now())
 }

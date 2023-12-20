@@ -6,9 +6,8 @@ type Props = {
 
 export default function DashboardStorageLayout({ children }: Props) {
   return (
-    <div className="flex h-calc-screen">
-      <StorageSideBar />
+    <main>
       {children}
-    </div>
+    </main>
   );
 }

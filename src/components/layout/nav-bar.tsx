@@ -12,7 +12,7 @@ const Navbar = () => {
   const pathName = usePathname();
   const session = useSession();
 
-  if (pathName === "/sign-in" || pathName === "/sign-up") {
+  if (pathName === "/sign-in" || pathName === "/sign-up" || pathName === "/onboarding") {
     return null;
   }
 

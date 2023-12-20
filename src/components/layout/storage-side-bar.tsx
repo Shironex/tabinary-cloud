@@ -128,7 +128,6 @@ const StorageSideBar = () => {
       icon: <Trash2 size={22} className="text-red-600" />,
     },
   ];
-  useEffect(() => console.log(8 + 48 * selected), [selected]);
   return (
     <aside className="flex h-full w-[250px] flex-shrink-0 flex-col py-3 bg-background border-r-[1px]">
       <ul className="relative px-3">
@@ -141,9 +140,7 @@ const StorageSideBar = () => {
             >
               <span className="pl-1">{item.icon}</span>
               <span
-                className={`whitespace-nowrap text-sm duration-300 ${
-                  !open ? "scale-0" : ""
-                }`}
+                className={`whitespace-nowrap text-sm duration-300`}
               >
                 {item.label}
               </span>
